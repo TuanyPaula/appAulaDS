@@ -13,36 +13,39 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top mb-3">
-        <a class="navbar-brand text-white">appAulaDS</a>
-        <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">APP DS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div id="my-nav" class="collapse navbar-collapse">
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="mdi mdi-plus-circle"></i> Cadastros
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Cadastros
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item categoria"><i class="mdi mdi-yelp"></i> Categorias</a>
-                        <a class="dropdown-item" href="#"><i class="mdi mdi-account"></i> Clientes</a>
+                        <a class="dropdown-item cliente"><i class="mdi mdi-account"></i> Clientes</a>
                         <a class="dropdown-item" href="#"><i class="mdi mdi-cards"></i> Formas de Pagamento</a>
                         <a class="dropdown-item" href="#"><i class="mdi mdi-webpack"></i> Produtos</a>
-
                     </div>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <div class="container mt-5" id="conteudo"></div>
+    <div  id="conteudo"></div>
 
     <div class="container-fluid mt-3 border-top">
         <div class="row">
             <div class="col-12">
                 <p class="text-center text-dark">
-                    Todos os direitos reservados a Etec de Lins
+                    Site elaborado nas aulas de DS e TM com os professores Adriano e Rafael.
+                </p>
+                <p class="text-center text-dark">
+                    Feito pela aluna Tuany Paula da Costa
                 </p>
             </div>
         </div>
@@ -54,6 +57,7 @@
     <script src="js/function-menu.js"></script>
     <script src="libs/sweetalert2/dist/sweetalert2.js"></script>
     <script src="libs/DataTables/datatables.js"></script>
+
 </body>
 
 </html>

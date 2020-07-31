@@ -1,38 +1,36 @@
 $(document).ready(function() {
 
-    $('#table-categoria').on('click', 'button.btn-view', function(e) {
+    $('#table-cliente').on('click', 'button.btn-view', function(e) {
         e.preventDefault()
 
         $('.modal-title').empty()
         $('.modal-body').empty()
 
-        $('.modal-title').append('Visualização de categoria')
+        $('.modal-title').append('Visualização do cliente')
 
-        let idcategoria = `idcategoria=${$(this).attr('id')}`
+        let idcategoria = `idcliente=${$(this).attr('id')}`
 
         $.ajax({
             type: 'POST',
             dataType: 'JSON',
             assync: true,
             data: idcategoria,
-            url: 'src/categorias/modelo/view-categoria.php',
+            url: 'src/clientes/modelo/view-cliente.php',
             success: function(dado) {
                 if (dado.tipo == "success") {
-                    $('.modal-body').load('src/categorias/visao/form-categoria.html', function() {
+                    $('.modal-body').load('src/clientes/visao/form-cliente.html', function() {
                         $('#nome').val(dado.dados.nome)
                         $('#nome').attr('readonly', 'true')
                         $('#dataagora').val(dado.dados.datacriacao)
 
-                        if (dado.dados.ativo == "N") {
-                            $('#ativo').removeAttr('checked')
-                        }
+                        $('#ativo option[value="'+dado.dados.ativo+'"]').attr('selected','selected')
 
                         $('#ativo').attr('readolnly', 'true')
 
                     })
                     $('.btn-save').hide()
                     $('.btn-update').hide()
-                    $('#modal-categoria').modal('show')
+                    $('#modal-cliente').modal('show')
                 } else {
                     Swal.fire({
                         title: 'appAulaDS',
